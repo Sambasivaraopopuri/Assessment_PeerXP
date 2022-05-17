@@ -1,2 +1,2 @@
 # PeerXP
-# PeerXp-Assessment
+# PeerXp Company Assessment
