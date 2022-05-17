@@ -1,0 +1,54 @@
+{% extends 'base.html'%}
+{% load static %}
+{%block contents%}
+<style>
+    img {
+      border-radius: 50%;
+    }
+    </style>
+<div class="container">
+    <div class="row" >
+        <div class="col-1">
+            
+        </div>
+        <div class="col-8">
+            <div class="row">
+                &nbsp;
+            </div>
+            <span >Status&nbsp;:</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue;">Open({{count}})</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span style="color: blue;">Closed</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue;">On Hold</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span>Created By&nbsp;:</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue;">You</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue;">Team</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: blue;">My CCed tickets</span>
+            <div class="row">
+                &nbsp;
+            </div>
+            {%for i in tickets%}
+            <div class="row form-control">
+                <div class="col">
+                    <h5 style="color: blue;">test tickets &nbsp;-&nbsp;ignor</h5>
+                    <img src="{% static 'images/logo.jpg' %}" alt="Avatar" style="width:35px" >
+                    &nbsp;. &nbsp; &nbsp;{{i.Category}}&nbsp;. &nbsp; &nbsp;{{i.upload_date}} <p style="text-align: right;"> {{forloop.counter}}</p> 
+                </div>
+              
+            </div>
+            <br>
+            {%endfor%}
+        </div>
+        <div class="col">
+            <div class="row">
+                &nbsp;<br>
+                &nbsp;
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h5>Department(S)</h5>
+                    <img src="{% static 'images/logo.jpg' %}" alt="Avatar" style="width:20px" />&nbsp;&nbsp;<span style="color: blue;"><a href="#">All Department</a> </span><br><br>
+                    <img src="{% static 'images/logo.jpg' %}" alt="Avatar" style="width:20px" />&nbsp;&nbsp;<span style="color: blue;"><a href="#">PWSLab DevOps Support</a> </span><br><br>
+                    <img src="{% static 'images/logo.jpg' %}" alt="Avatar" style="width:20px" />&nbsp;&nbsp;<span style="color: blue;"><a href="#">isupport</a> </span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+{%endblock%}
