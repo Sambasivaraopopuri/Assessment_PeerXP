@@ -1,3 +1,2 @@
 # PeerXP
-# PeerXP
 # PeerXp-Assessment
